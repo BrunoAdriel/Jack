@@ -1,9 +1,11 @@
 import React from 'react'
+import carritoCompras from '../imgs/carrito.png'
+
 
 function CartWidget() {
     return (
         <div>
-            <img src='../imgs/carrito.png' ></img>
+            <img src={carritoCompras} alt='carrito de compras' className='imgcarrito ms-auto p-2'></img>
         </div>
 )
 }
