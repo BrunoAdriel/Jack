@@ -1,6 +1,11 @@
 .navbar{
   background-color: bisque;
 text-decoration: none;
+} 
+
+.navbar a {
+  text-decoration: none; 
+  color: black;
 }
 
 .imgcarrito{
@@ -8,6 +13,5 @@ text-decoration: none;
   width: 40px;
   fill: none;
 }
-
 
 
