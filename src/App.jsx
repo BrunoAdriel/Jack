@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './Components/Navbar'
 import ItemListContainer from './Components/ItemListContainer'
 import Entrada from './Components/Entrada'
+import Productos from './Productos/Productos'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,9 +14,11 @@ function App() {
         <Navbar />
       </div>
       <Entrada/>
-      <div>
+      
       <ItemListContainer/>
-      </div>
+      
+      <Productos/>
+  
     </>
   )
 }

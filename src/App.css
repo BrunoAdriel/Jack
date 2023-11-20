@@ -26,4 +26,35 @@
   margin-top: 5px;
 }
 
+/* Estilos de la seccion Entrada */
+
+.entrada{
+  width: 100%;
+  height:100vh;
+} 
+
+.txtEntrada {
+    color: white;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+}
+
+
+/* Estilos de la seccion ItemListContainer */
+
+
+.imgCarrusel{
+  height: 600px;
+
+}
+
+/* Estilos de la seccion "Productos" */
+
+.sizeCard{
+  width: 150vh;
+}
+
 

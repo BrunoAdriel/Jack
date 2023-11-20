@@ -5,7 +5,8 @@ return (
     <>
     <h2>Nuesto catálogo</h2>
     <h3>Ultimos ingresos</h3>
-        <div id="carouselExampleIndicators" className="carousel slide">
+
+        <div id="carouselExampleIndicators" className="container carousel slide">
             <div className="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -13,13 +14,13 @@ return (
             </div>
             <div className="carousel-inner">
                 <div className="carousel-item active">
-                    <img src="https://acdn.mitiendanube.com/stores/001/220/451/products/chamarra-adidas-bomber-oversize-vrct-is-fi4688-31-ce5e94652ce39aeea716293459503506-640-0.webp" className="d-block w-80" style={{height:800}} alt="..."/>
+                    <img src="https://acdn.mitiendanube.com/stores/001/220/451/products/chamarra-adidas-bomber-oversize-vrct-is-fi4688-31-ce5e94652ce39aeea716293459503506-640-0.webp" className="mx-auto d-block imgCarrusel"  alt="..."/>
                 </div>
                 <div className="carousel-item">
-                    <img src="https://acdn.mitiendanube.com/stores/219/431/products/fa94d24f-dc20-41a4-813c-304ca1b734d7-84bc601b1ec0163cfa16935206931981-1024-1024.webp" className="d-block w-80 img-fluid" style={{height:800}} alt="..."/>
+                    <img src="https://acdn.mitiendanube.com/stores/219/431/products/fa94d24f-dc20-41a4-813c-304ca1b734d7-84bc601b1ec0163cfa16935206931981-1024-1024.webp" className="mx-auto d-block imgCarrusel"  alt="..."/>
                 </div>
                 <div className="carousel-item">
-                    <img src="https://nikearprod.vtexassets.com/arquivos/ids/648098-800-800?v=638212463533370000&width=800&height=800&aspect=true" className="d-block w-80" style={{height:800}} alt="..."/>
+                    <img src="https://nikearprod.vtexassets.com/arquivos/ids/648098-800-800?v=638212463533370000&width=800&height=800&aspect=true" className="mx-auto d-block imgCarrusel"  alt="..."/>
             </div>
         </div>
         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -37,3 +38,4 @@ return (
 }
 
 export default ItemListContainer
+
