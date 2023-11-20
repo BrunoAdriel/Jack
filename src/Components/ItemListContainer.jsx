@@ -1,7 +1,7 @@
 import React from 'react'
 
 function ItemListContainer() {
-  return (
+return (
     <>
     <h2>Nuesto catálogo</h2>
     <h3>Ultimos ingresos</h3>
@@ -33,7 +33,7 @@ function ItemListContainer() {
         </div>
         
     </>
-  )
+)
 }
 
 export default ItemListContainer
