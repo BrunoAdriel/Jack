@@ -1,5 +1,12 @@
+/* Estilos generales de la pagina */
+
+body{
+  background-color: #b9b9b9;
+}
+
+/* Estilos de la seccion Navbar */
 .navbar{
-  background-color: bisque;
+  background-color: hsl(26, 13%, 69%);
   text-decoration: none;
   display: flex;
   justify-content: space-around;
@@ -58,3 +65,10 @@
 }
 
 
+/* Estilos de la seccion "ProdSelecc" */
+
+.ProdSelecc{
+  background-color: gray;
+  width: 700px;
+  height: 700px;
+}

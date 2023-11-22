@@ -20,7 +20,7 @@ function Productos() {
             <h2>Nuestros Productos</h2>
         <div className='container'>
             <div className="row row-cols-1 row-cols-md-3 g-4 sizeCard">
-                {prods.map((el) => <Card nombre={el.nombre} descripcion={el.descripcion} marca={el.marca} stock={el.stock} img={el.img}/>)}
+                {prods.map((el) => <Card nombre={el.nombre} descripcion={el.descripcion} marca={el.marca} stock={el.stock} img={el.img} key={el.id}/>)}
             </div>
         </div>
         </> 
