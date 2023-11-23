@@ -4,7 +4,7 @@ import ProdSelecc from './ProdSelecc'
 
 function Card ({nombre, descripcion, marca, stock, img}) {
     
-    const [sumarCarro, setSumarCarro] = useState(0)
+    const [sumarCarro, setSumarCarro] = useState([])
     console.log(sumarCarro)    
 
     return (
