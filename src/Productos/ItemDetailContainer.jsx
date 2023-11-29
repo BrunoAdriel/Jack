@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Card from './Card'
+import ItemDetail from './ItemDetail';
 import NorthFaceBlanca from "../imgs/NortFaceBlanca.jpg";
 import CamperaNikeNegra from "../imgs/CamperaNikeNegra.jpg"
 import CamperaNikePuffer from "../imgs/CamperaNikePuffer.jpg"
@@ -12,7 +13,8 @@ import CamperaAdidasRunning from "../imgs/CamperaAdidasRunning.jpg"
 
 
 
-function Productos() {
+
+function ItemDetailContainer() {
 
     const prods =[
         {id: 1, nombre:"Camepera Nike", descripcion: "Lorem8", marca: "Nike", stock:15, img: CamperaNikeNegra },
@@ -26,16 +28,14 @@ function Productos() {
         {id: 9, nombre:"Campera Adidas Running", descripcion:"Camperon Adidas Running Lorem8", marca:"Adidas", stock: 20, img: CamperaAdidasRunning}
     ]
 
+    // const [list, setList] = useState([])
+
     return (
         <>
-            <h2>Nuestros Productos</h2>
-        <div className='container'>
-            <div className="row row-cols-1 row-cols-md-3 g-4 sizeCard">
-                {prods.map((el) => <Card nombre={el.nombre} descripcion={el.descripcion} marca={el.marca} stock={el.stock} img={el.img} key={el.id}/>)}
-            </div>
-        </div>
+            <ItemDetail prods={prods}/>
+
         </> 
     )
 }
 
-export default Productos
+export default ItemDetailContainer

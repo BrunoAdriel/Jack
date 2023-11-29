@@ -3,7 +3,7 @@ import './App.css'
 import Navbar from './Components/Navbar'
 import ItemListContainer from './Components/ItemListContainer'
 import Entrada from './Components/Entrada'
-import Productos from './Productos/Productos'
+import ItemDetailContainer from './Productos/ItemDetailContainer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,7 +17,7 @@ function App() {
       
       <ItemListContainer/>
       
-      <Productos/>
+      <ItemDetailContainer/>
   
     </>
   )

@@ -1,11 +1,8 @@
-import {React, useState} from 'react'
+
 import ProdSelecc from './ProdSelecc'
 
 
 function Card ({nombre, descripcion, marca, stock, img}) {
-    
-    const [sumarCarro, setSumarCarro] = useState([])
-    console.log(sumarCarro)    
 
     return (
         <>
@@ -17,7 +14,7 @@ function Card ({nombre, descripcion, marca, stock, img}) {
                         <p className="card-text">Talles disponibles: </p>
                         <p className="card-text"><small className="text-body-secondary">Cantidad disponible:{stock}</small></p>
                         <a className="btn btn-primary rounded float-start" href={<ProdSelecc/>}>Mas Info</a>
-                        <button className="btn btn-primary rounded float-end" onClick={() => setSumarCarro( sumarCarro + 1)}>Comprar</button>
+                        <button className="btn btn-primary rounded float-end">Comprar</button>
                     </div>
                 </div>
         </>
