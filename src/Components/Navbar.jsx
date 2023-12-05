@@ -1,6 +1,7 @@
 import React from 'react'
 import CartWidget from './CartWidget'
 import Logo from "../imgs/chaleco.png"
+import { Link } from 'react-router-dom' 
 
 
 const Navbar = () => {
@@ -10,18 +11,18 @@ const Navbar = () => {
                     <ul className="nav d-flex ">
                         <img src={Logo} alt='logo de la pagina, chaleco' />
                         <li className="nav-item">
-                            <a className="nav-link active a" aria-current="page" href="#">Inicio</a>
+                            <Link to={"/"} className="nav-link active a" aria-current="page">Inicio</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Productos</a>
+                            <Link to={"/category/Nike"} className="nav-link">Nike</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Sobre Nosotros</a>
+                            <Link to={"/category/Adidas"} className="nav-link">Adidas</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Ingresar</a>
+                            <Link to={"/category/NorthFace"} className="nav-link">North Face</Link>
                         </li>
-                        <CartWidget/>
+                        <Link to={"/cart"}> <CartWidget/></Link> 
                     </ul>
             </div>
         </>

@@ -1,22 +1,22 @@
 
 [
 {
-    "id": 1, "nombre":"Camepera Nike", "descripcion": "Lorem8", "marca": "Nike", "stock":15, "img": "../../imgs/CamperaNikeNegra.jpg"
+    "id": 1,"precio": 140000, "nombre":"Camepera Nike", "descripcion": "Lorem8", "marca": "Nike", "stock":15, "img": "../../../public/CamperaNikeNegra.jpg"
 },{
-    "id": 2, "nombre":"Campera Adidas", "descripcion": "Lorem8", "marca": "Adidas", "stock":16, "img": "../../imgs/CamperaAdidas.jpg"
+    "id": 2,"precio": 120000, "nombre":"Campera Adidas", "descripcion": "Lorem8", "marca": "Adidas", "stock":16, "img": "../../../public/CamperaAdidas.jpg"
 },{
-    "id": 3, "nombre":"Campera Nike Puffer", "descripcion":"Campera Nike Puffer Lorem8", "marca": "Nike", "stock": 14, "img": "../../imgs/CamperaNikePuffer.jpg"
+    "id": 3,"precio": 160000, "nombre":"Campera Nike Puffer", "descripcion":"Campera Nike Puffer Lorem8", "marca": "Nike", "stock": 14, "img": "../../../public/CamperaNikePuffer.jpg"
 },{
-    "id": 4, "nombre":"Campera North Face", "descripcion": "Lorem8", "marca": "North Face", "stock": 10, "img": "../../imgs/NorthFaceBlanca.jpg" 
+    "id": 4,"precio": 180000, "nombre":"Campera North Face", "descripcion": "Lorem8", "marca": "NorthFace", "stock": 10, "img": "../../../public/NortFaceBlanca.jpg" 
 },{
-    "id": 5, "nombre":"Campera Adidas", "descripcion":"Campera Adidas Lorem8", "marca":"Adidas", "stock": 15, "img": "../../imgs/CamperonAdidas.jpg" 
+    "id": 5,"precio": 140000, "nombre":"Campera Adidas", "descripcion":"Campera Adidas Lorem8", "marca":"Adidas", "stock": 15, "img": "../../../public/CamperonAdidas.jpg" 
 },{    
-    "id": 6, "nombre":"Camperon North Face", "descripcion":"Camperon North Face Lorem8", "marca":"North Face", "stock": 7, "img": "../../imgs/CamperonNorthFace.jpg" 
+    "id": 6,"precio": 100000, "nombre":"Camperon North Face", "descripcion":"Camperon North Face Lorem8", "marca":"NorthFace", "stock": 7, "img": "../../../public/CamperonNorthFace.jpg" 
 },{
-    "id": 7, "nombre":"Campera North Face By Suprime", "descripcion":"Campera North Face by suprime Lorem8", "marca":"North Face", "stock": 9, "img": "../../imgs/CamperaNorthFaceBySuprime.jpg" 
+    "id": 7,"precio": 135000, "nombre":"Campera North Face By Suprime", "descripcion":"Campera North Face by suprime Lorem8", "marca":"NorthFace", "stock": 9, "img": "../../../public/CamperaNorthFaceBySupreme.jpg" 
 },{
-    "id": 8, "nombre":"Campera Nike Running", "descripcion":"Campera Nike running Lorem8", "marca": "Nike", "stock": 17, "img": "../../imgs/CamperaNikeRunning.jpg" 
+    "id": 8,"precio": 120000, "nombre":"Campera Nike Running", "descripcion":"Campera Nike running Lorem8", "marca": "Nike", "stock": 17, "img": "../../../public/CamperaNikeRunning.jpg" 
 },{
-    "id": 9, "nombre":"Campera Adidas Running", "descripcion":"Camperon Adidas Running Lorem8", "marca":"Adidas", "stock": 20, "img": "../../imgs/CamperaAdidasRunning.jpg"
+    "id": 9,"precio": 170000, "nombre":"Campera Adidas Running", "descripcion":"Camperon Adidas Running Lorem8", "marca":"Adidas", "stock": 20, "img": "../../../public/CamperaAdidasRunning.jpg"
 }
 ]

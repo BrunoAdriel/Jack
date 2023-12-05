@@ -60,15 +60,9 @@ body{
 
 /* Estilos de la seccion "Productos" */
 
-.sizeCard{
-  width: 150vh;
+.ItemDetailCard{
+  width: 60vh;
+  display: flex;
+  flex-direction: row;
 }
 
-
-/* Estilos de la seccion "ProdSelecc" */
-
-.ProdSelecc{
-  background-color: gray;
-  width: 700px;
-  height: 700px;
-}
