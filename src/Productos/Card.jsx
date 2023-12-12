@@ -1,5 +1,4 @@
 import React from 'react';
-import ProdSelecc from './ProdSelecc'
 import { Link } from 'react-router-dom';
 
 

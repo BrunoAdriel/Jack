@@ -28,8 +28,9 @@ function ItemListContainer() {
     return (
         <>
             <h2>Nuestros Productos</h2>
-            <ItemList item={item}/>
-
+            <div className='container '>
+                <ItemList item={item}/>
+            </div>
         </> 
 )
 }

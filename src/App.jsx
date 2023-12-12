@@ -16,8 +16,10 @@ function App() {
       <div className="navbar">
         <Navbar />
       </div>
-      {/* <Entrada/>
-{/* //esto se encuentra comentado por que tengo problemas con la interfaz, se muestra al principio de todas las paginas // */}
+      {/* <div>
+      <Entrada/>
+ //esto se encuentra comentado por que tengo problemas con la interfaz, se muestra al principio de todas las paginas //
+      </div> */}
       <Routes>
         <Route path={'/'} element={<ItemListContainer/>} />
         <Route path={'/category/:id'} element={<ItemListContainer/>} />

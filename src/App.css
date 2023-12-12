@@ -49,13 +49,8 @@ body{
     font-size: 40px;
 }
 
-
-/* Estilos de la seccion ItemListContainer */
-
-
-.imgCarrusel{
-  height: 600px;
-
+.espacioCards{
+  justify-content:space-around;
 }
 
 /* Estilos de la seccion "Productos" */

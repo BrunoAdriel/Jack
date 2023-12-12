@@ -9,7 +9,7 @@ const Navbar = () => {
         <>
                 <div className='row'>
                     <ul className="nav d-flex ">
-                        <img src={Logo} alt='logo de la pagina, chaleco' />
+                        <Link to={"/"}><img src={Logo} alt='logo de la pagina, chaleco' /></Link>
                         <li className="nav-item">
                             <Link to={"/"} className="nav-link active a" aria-current="page">Inicio</Link>
                         </li>
