@@ -13,6 +13,7 @@ function ItemDetail({item}) {
         addProduct(item, quantity);
     }
     
+
     return (
 <>
 
@@ -22,12 +23,12 @@ function ItemDetail({item}) {
             <h5 className="card-title">{item.nombre}</h5>
             <p className="card-text">{item.descripcion}</p>
             <p className="card-text">$: {item.precio} </p>
-            <div>
+            <section>
                 <p className='card-text'>Seleccione un talle:<SizeCheck/></p>
-            </div>
+            </section>
             <p className="card-text"><small className="text-body-secondary">Cantidad disponible: {item.stock}</small></p>
             <div>
-                {goToCart ? <Link to='/cart'>Terminar de comprar</Link>: <ItemQuantity stock={item.stock} initial={0} onAdd={onAdd}/>}
+                {goToCart ? <Link to='/cart'>Ver Carrito</Link>: <ItemQuantity stock={item.stock} initial={0} onAdd={onAdd}/>}
             </div>
         </div>
     </div>
