@@ -5,7 +5,10 @@ import ItemListContainer from './Components/ItemListContainer'
 import Entrada from './Components/Entrada'
 import ItemDetailContainer from './Productos/ItemDetailContainer'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import CartWidget from './Components/CartWidget'
+import CartProvider from './Context/CartContext'
+import Cart from './Components/Cart/Cart'
+
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,6 +16,7 @@ function App() {
   return (
     <>
     <BrowserRouter>
+    <CartProvider>
       <div className="navbar">
         <Navbar />
       </div>
@@ -20,17 +24,18 @@ function App() {
       <Entrada/>
  //esto se encuentra comentado por que tengo problemas con la interfaz, se muestra al principio de todas las paginas //
       </div> */}
+
       <Routes>
         <Route path={'/'} element={<ItemListContainer/>} />
         <Route path={'/category/:id'} element={<ItemListContainer/>} />
         <Route path={'/item/:id'} element={<ItemDetailContainer/>} />
-      
-        <Route path={'/cart'} element={<CartWidget/>} />
+        <Route path={'/cart'} element={<Cart/>} />
 
-      
+
 
       
         </Routes>
+        </CartProvider>
       </BrowserRouter>
     </>
   )

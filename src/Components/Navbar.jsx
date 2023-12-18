@@ -1,5 +1,5 @@
 import React from 'react'
-import CartWidget from './CartWidget'
+import carritoCompras from '../imgs/carrito.png'
 import Logo from "../imgs/chaleco.png"
 import { Link } from 'react-router-dom' 
 
@@ -22,7 +22,7 @@ const Navbar = () => {
                         <li className="nav-item">
                             <Link to={"/category/NorthFace"} className="nav-link">North Face</Link>
                         </li>
-                        <Link to={"/cart"}> <CartWidget/></Link> 
+                        <Link to={"/cart"}> <img src={carritoCompras} alt='carrito de compras' className='imgcarrito ms-auto'></img></Link> 
                     </ul>
             </div>
         </>

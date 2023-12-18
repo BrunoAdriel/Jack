@@ -1,11 +1,15 @@
 import React from 'react'
-import carritoCompras from '../imgs/carrito.png'
-
+import { useCartContext } from '../Context/CartContext'
 
 function CartWidget() {
+
+    const {totalProducts, cart} = useCartContext();
+
     return (
-        <div>
-            <img src={carritoCompras} alt='carrito de compras' className='imgcarrito ms-auto'></img>
+        <div className='conatiner'>
+            <button>
+                <span>{totalProducts() || cart}</span>
+            </button>
         </div>
 )
 }
