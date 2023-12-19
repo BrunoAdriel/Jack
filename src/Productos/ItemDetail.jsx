@@ -13,7 +13,13 @@ function ItemDetail({item}) {
         addProduct(item, quantity);
     }
     
+    const [infoSize, setInfoSize] = useState(false);
+    const prodSize = (size) =>{
+            setInfoSize(true);
 
+    }
+    
+    
     return (
 <>
 
@@ -24,7 +30,10 @@ function ItemDetail({item}) {
             <p className="card-text">{item.descripcion}</p>
             <p className="card-text">$: {item.precio} </p>
             <section>
-                <p className='card-text'>Seleccione un talle:<SizeCheck/></p>
+                <p className='card-text'>Seleccione un talle:</p>
+                <div>
+                    <SizeCheck sizeSelect={prodSize}/>
+                </div>
             </section>
             <p className="card-text"><small className="text-body-secondary">Cantidad disponible: {item.stock}</small></p>
             <div>
