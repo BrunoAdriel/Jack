@@ -11,17 +11,17 @@ const CartProvider = ({children}) => {
 
     // agregar producto por id 
 
-    const addProduct = (item, quantity) => {
+    const addProduct = (item, quantity, infoSize) => {
         if(isInCart(item.id)) {
             setCart(
                 cart.map((product) => {
                     return product.id === item.id ?{
-                        ...product, quantity: product.quantity + quantity
+                        ...product, quantity: product.quantity + quantity, infoSize
                     } : product;
                 })
             );
         } else {
-            setCart([...cart, {...item, quantity}]);
+            setCart([...cart, {...item, quantity, infoSize}]);
         }
     }
 

@@ -11,6 +11,7 @@ const ItemCart = ({product}) => {
                 <tr className="table-light">
 
                     <td className="table-light"><img src={product.img} alt={product.name}></img></td>
+                    <td className="table-light">TAMANIO PRENDA {product.infoSize}</td>
                     <td className="table-light">{product.nombre}</td>
                     <td className="table-light">{product.precio}</td>
                     <td className="table-light">{product.quantity}</td>

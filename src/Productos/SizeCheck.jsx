@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import '../App.css'
 
 
 function SizeCheck({sizeSelect}) {
@@ -12,17 +13,18 @@ function SizeCheck({sizeSelect}) {
         sizeSelect(size);
     }
 
-
+//  Uso de ternario para que iguale el tamaño elegido al de los  botones, de sea un btn solido 
+    
     return (
     <>
     <div className="container text-center">
-        <div className="row row-cols-auto">
-            <button className="col" onClick={() => sizeClick('S')}>S</button>
-            <button className="col" onClick={() => sizeClick('M')}>M</button>
-            <button className="col" onClick={() => sizeClick('L')}>L</button>
-            <button className="col" onClick={() => sizeClick('XL')}>XL</button>
-            <button className="col" onClick={() => sizeClick('XXL')}>XXL</button>
-            <button className="col" onClick={() => sizeClick('XXXL')}>XXXL</button>
+        <div className="row row-cols-auto d-flex justify-content-center">
+            <button className={`btn ${selectedSize === 'S' ? 'btn-secondary' : 'btn-outline-secondary'}`} onClick={() => sizeClick('S')}>S</button>
+            <button className={`btn ${selectedSize === 'M' ? 'btn-secondary' : 'btn-outline-secondary'}`} onClick={() => sizeClick('M')}>M</button>
+            <button className={`btn ${selectedSize === 'L' ? 'btn-secondary' : 'btn-outline-secondary'}`} onClick={() => sizeClick('L')}>L</button>
+            <button className={`btn ${selectedSize === 'XL' ? 'btn-secondary' : 'btn-outline-secondary'}`} onClick={() => sizeClick('XL')}>XL</button>
+            <button className={`btn ${selectedSize === 'XXL' ? 'btn-secondary' : 'btn-outline-secondary'}`} onClick={() => sizeClick('XXL')}>XXL</button>
+            <button className={`btn ${selectedSize === 'XXXL' ? 'btn-secondary' : 'btn-outline-secondary'}`} onClick={() => sizeClick('XXXL')}>XXXL</button>
         </div>
     </div>
     </>

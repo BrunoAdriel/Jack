@@ -7,23 +7,17 @@ import ItemQuantity from './ItemQuantity';
 function ItemDetail({item}) {
 
     const[goToCart, setGoToCart] = useState(false);
+    const [infoSize, setInfoSize] = useState(false);
     const {addProduct} = useCartContext();
     const onAdd = (quantity) =>{
         setGoToCart(true);
-        addProduct(item, quantity);
+        addProduct(item, quantity, infoSize);
     }
-    
-    const [infoSize, setInfoSize] = useState(false);
-    const prodSize = (size) =>{
-            setInfoSize(true);
-
-    }
-    
     
     return (
 <>
 
-<div className="card ItemDetailCard ">
+<div className="card ItemDetailCard shadow-lg p-3 mb-5 bg-body-tertiary rounded">
         <img src={item.img} className="card-img-top" alt={item.nombre}/>
         <div className="card-body">
             <h5 className="card-title">{item.nombre}</h5>
@@ -32,11 +26,11 @@ function ItemDetail({item}) {
             <section>
                 <p className='card-text'>Seleccione un talle:</p>
                 <div>
-                    <SizeCheck sizeSelect={prodSize}/>
+                    <SizeCheck sizeSelect={setInfoSize}/>
                 </div>
             </section>
-            <p className="card-text"><small className="text-body-secondary">Cantidad disponible: {item.stock}</small></p>
             <div>
+                <p className="card-text"><small className="text-body-secondary">Cantidad disponible: {item.stock}</small></p>
                 {goToCart ? <Link to='/cart'>Ver Carrito</Link>: <ItemQuantity stock={item.stock} initial={0} onAdd={onAdd}/>}
             </div>
         </div>
