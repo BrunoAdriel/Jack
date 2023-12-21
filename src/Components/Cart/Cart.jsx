@@ -24,10 +24,15 @@ if(cart.length === 0){
     
     return (
         <>
+            <div className='container'>
+
             {cart.map((product)=>(
                 <ItemCart key={product.id} product={product}/>
             ))}
+
             <p>Total a pagar: $ {totalPrice()} </p>
+
+            </div>
             <Link to="/checkout">
                 {' '}
                 <button className='btn-total'>Finalizar Compra</button>
