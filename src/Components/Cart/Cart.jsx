@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useCartContext } from '../../Context/CartContext';
 import ItemCart from './ItemCart';
+import TableHeader from './TableHeader'
 
 const Cart = () => {
 
@@ -26,6 +27,8 @@ if(cart.length === 0){
         <>
             <div className='container'>
 
+            <TableHeader/>
+            
             {cart.map((product)=>(
                 <ItemCart key={product.id} product={product}/>
             ))}

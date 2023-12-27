@@ -61,3 +61,19 @@ body{
   flex-direction: row;
 }
 
+/* Estilos tabla carrito */
+
+table{
+  display: contents;
+  text-align: left;
+}
+th,td{
+  width: 3%;
+  text-align: center;
+}
+
+
+.tableCart{
+  width: 100px;
+  height: 100px;
+}

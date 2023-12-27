@@ -31,6 +31,24 @@ const totalPrice = () =>{
     return cart.reduce((prev, act) => prev + act.quantity * act.price, 0);
 };
 
+// console.log(cart)
+
+
+// const totalPrice = () => {
+//     return cart.reduce((prev, product) => {
+//         const productPrice = parseFloat(product.price);
+//         const productQuantity = parseInt(product.quantity);
+
+//         if (!isNaN(productPrice) && !isNaN(productQuantity)) {
+//             return prev + productQuantity * productPrice;
+//         } else {
+//             console.error(`Invalid quantity or price for product: ${JSON.stringify(product)}`);
+//             return prev;
+//         }
+//     }, 0);
+// };
+
+
 // Calcular total de los productos
 
 const totalProducts = () =>
