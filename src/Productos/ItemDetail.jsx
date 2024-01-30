@@ -31,7 +31,10 @@ function ItemDetail({item}) {
             </section>
             <div>
                 <p className="card-text"><small className="text-body-secondary">Cantidad disponible: {item.stock}</small></p>
-                {goToCart ? <Link to='/cart'>Ver Carrito</Link>: <ItemQuantity stock={item.stock} initial={0} onAdd={onAdd}/>}
+                {goToCart ? <div className='d-flex flex-column'>
+                                <Link to='/cart' className='text-success'>Ver Carrito</Link>
+                                <Link to='/#' className='text-dark'>Seguir Comprando</Link></div> : <ItemQuantity stock={item.stock} initial={0} onAdd={onAdd}/>}
+                
             </div>
         </div>
     </div>
@@ -39,5 +42,6 @@ function ItemDetail({item}) {
 </>
 )
 }
+
 
 export default ItemDetail

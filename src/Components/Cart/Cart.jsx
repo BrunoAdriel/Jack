@@ -8,21 +8,21 @@ const Cart = () => {
 
 // Llamamos las funciones que queremos usar  
 
-const { cart, totalPrice} = useCartContext();
+const { cart, totalPrice, clearCart} = useCartContext();
     
 if(cart.length === 0){
     return(<>
 
-                <div className="d-flex justify-content-center"> 
-                    <p>No hay elementos cargados en el carrito.</p>
+                <div className="NoElemetCarrito"> 
+                    <p className='fw-bolder'>No hay productos cargados en el carrito.</p>
                     <Link to="/">
-                        <button>Volver al Inicio</button>
+                        <button className="btn btn-dark">Volver al Inicio</button>
                     </Link>
                 </div>
 
     </>)
 }
-    
+    console.log(cart)
     return (
         <>
             <div className='container'>
@@ -33,13 +33,17 @@ if(cart.length === 0){
                 <ItemCart key={product.id} product={product}/>
             ))}
 
-            <p>Total a pagar: $ {totalPrice()} </p>
+            <p className="text-end fw-bolder fs-5">Total a pagar: $ {totalPrice()} </p>
 
             </div>
-            <Link to="/checkout">
-                {' '}
-                <button className='btn-total'>Finalizar Compra</button>
-            </Link>
+            <div className="btnsCarro">
+                <button onClick={clearCart} className="btn btn-outline-danger">Limpiar Carro</button>
+
+                <Link to="/checkout">
+                    {' '}
+                    <button className='btn btn-outline-success'>Finalizar Compra</button>
+                </Link>
+            </div>
 
         </>
 )

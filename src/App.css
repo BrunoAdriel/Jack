@@ -56,12 +56,22 @@ body{
 /* Estilos de la seccion "Productos" */
 
 .ItemDetailCard{
+  margin-top: 100px;
   width: 60vh;
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 /* Estilos tabla carrito */
+
+.NoElemetCarrito{
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
 
 table{
   display: contents;
@@ -76,4 +86,13 @@ th,td{
 .tableCart{
   width: 100px;
   height: 100px;
+}
+
+.btnsCarro{
+  margin-right: 100px;
+  display: flex;
+  flex-direction: row-reverse;
+
+} button{
+  margin-right: 15px;
 }
