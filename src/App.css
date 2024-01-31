@@ -12,24 +12,32 @@ body{
   justify-content: space-around;
 } 
 
-.navbar img{
-  height: 35px;
-  width: 35px;
-  position: absolute;
-  right: 90%;
-  margin-top: 5px;
-}
 
 .navbar a {
   text-decoration: none; 
   color: black;
 }
 
-.imgcarrito{
-  height: 60px;
-  width: 60px ;
+.navbar img{
+  height: 35px;
+  width: 35px;
+}
+
+.LogoNavar{
+  position: absolute;
+  right: 90%;
+  margin-top: 5px;
+}
+
+.imgCarrito{
   position: absolute;
   left: 95%;
+  margin-top: 5px;
+}
+
+.imgLogin{
+  position: absolute;
+  left: 92%;
   margin-top: 5px;
 }
 
@@ -63,6 +71,14 @@ body{
   align-items: center;
 }
 
+
+.sizeCard{
+  height:55vh;
+  text-align: end;
+  vertical-align: text-bottom;
+}
+
+
 /* Estilos tabla carrito */
 
 .NoElemetCarrito{
@@ -95,4 +111,23 @@ th,td{
 
 } button{
   margin-right: 15px;
+}
+
+/* Estilos seccion  Login */
+
+.containerLogin{
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  position: absolute;
+  bottom: 25%;
+  left: 60%;
+}
+
+/* Estilos seccion Registro */
+
+.containerRegistro{
+  width: 700px;
+  height: 700px;
+  background-color: white;
 }

@@ -5,9 +5,9 @@ function Item({item}) {
 return (
     <>
     <Link to={'/item/' + item.id} className='text-decoration-none'>
-    <div className="card ">
+    <div className="card sizeCard">
         <img src={item.img} className="card-img-top" alt={item.nombre}/>
-        <div className="card-body">
+        <div className="card-body ">
             <h5 className="card-title">{item.nombre} </h5>
             <p className="card-text">{item.descripcion}</p>
         </div>

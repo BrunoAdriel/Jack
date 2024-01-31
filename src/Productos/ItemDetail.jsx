@@ -17,7 +17,7 @@ function ItemDetail({item}) {
     return (
 <>
 
-<div className="card ItemDetailCard shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+<div className="ItemDetailCard shadow-lg p-3 mb-5 bg-body-tertiary rounded">
         <img src={item.img} className="card-img-top" alt={item.nombre}/>
         <div className="card-body">
             <h5 className="card-title">{item.nombre}</h5>

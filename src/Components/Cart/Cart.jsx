@@ -22,7 +22,7 @@ if(cart.length === 0){
 
     </>)
 }
-    console.log(cart)
+
     return (
         <>
             <div className='container'>

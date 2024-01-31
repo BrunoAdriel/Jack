@@ -7,6 +7,8 @@ import ItemDetailContainer from './Productos/ItemDetailContainer'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import CartProvider from './Context/CartContext'
 import Cart from './Components/Cart/Cart'
+import Login from './Components/Login/Login'
+import Register from './Components/Login/Register'
 
 
 
@@ -30,6 +32,8 @@ function App() {
         <Route path={'/category/:id'} element={<ItemListContainer/>} />
         <Route path={'/item/:id'} element={<ItemDetailContainer/>} />
         <Route path={'/cart'} element={<Cart/>} />
+        <Route path={'/login'} element={<Login/>}/>
+        <Route path={'/registro'} element={<Register/>}/>
 
 
 
