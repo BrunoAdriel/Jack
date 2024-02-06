@@ -118,6 +118,7 @@ th,td{
 .containerLogin{
   width: 500px;
   height: 500px;
+  border-radius: 3%;
   background-color: white;
   position: absolute;
   bottom: 25%;
@@ -127,7 +128,18 @@ th,td{
 /* Estilos seccion Registro */
 
 .containerRegistro{
+  padding: 10px;
   width: 700px;
-  height: 700px;
+  height: 550px;
+  border-radius: 3%;
   background-color: white;
+  position: absolute;
+  bottom: 25%;
+  left: 60%;  
+}
+
+.btnRegister{
+padding: 15px;
+  display: flex;
+  justify-content: space-evenly;
 }

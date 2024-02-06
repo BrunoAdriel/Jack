@@ -1,38 +1,47 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Register() {
 return (
-    <div className='containerRegistro'>
+<div className='containerRegistro'>
 {/* Nombre y apellido */}
-<div class="row">
-  <div class="col">
-    <input type="text" class="form-control" placeholder="Nobre" aria-label="First name"/>
-  </div>
-  <div class="col">
-    <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name"/>
-  </div>
-</div>
-{/* Direc email */}
-<div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Direccion Email</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-        </div>
-{/* a chekeaar */}
-    <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Direccion Email 2</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-        </div>
-{/* primera */}
-<label for="inputPassword5" class="form-label">Contraseña</label>
-<input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock"/>
-<div id="passwordHelpBlock" class="form-text">
-    La contraseña debe incluir de 8 a 20 caracteres, teniendo numeros y letras y no debe tener espacios, caracteres especiales o emoji.
-</div>
-{/* a checkear */}
-<label for="inputPassword5" class="form-label">Confirmar Constraseña</label>
-<input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock"/>
-
+  <div className="row">
+    <div className="col">
+      <input type="text" className="form-control" placeholder="Nobre" aria-label="First name"/>
     </div>
+    <div className="col">
+      <input type="text" className="form-control" placeholder="Apellido" aria-label="Last name" />
+    </div>
+  </div>
+{/* Direc email */}
+  <div class="mb-3">
+    <label for="exampleInputEmail1" className="form-label"></label>
+    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Direccion Email"/>
+  </div>
+{/* repetir email */}
+  <div class="mb-3">
+    <label for="exampleInputEmail1" className="form-label"></label>
+    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Confirmar Email"/>
+  </div>
+{/* contraseña */}
+  <div>
+    <label for="inputPassword5" className="form-label"></label>
+    <input type="password" id="inputPassword5" className="form-control" aria-describedby="passwordHelpBlock" placeholder="Constraseña"/>
+      <div id="passwordHelpBlock" className="form-text">
+        La contraseña debe incluir de 8 a 20 caracteres, teniendo numeros y letras y no debe tener espacios, caracteres especiales o emoji. 
+      </div>
+  </div>
+{/* repetir contra */}
+  <div>
+    <label for="inputPassword5" className="form-label"></label>
+    <input type="password" id="inputPassword5" className="form-control" aria-describedby="passwordHelpBlock" placeholder="Confirmar Contraseña"/>
+  </div>
+{/* Buttons final */}
+  <div className='btnRegister'>
+    <spam>Deseas volver a <Link to="/Login">Ingrersar</Link></spam>
+    <button type="button" className="btn btn-success">Registrarse</button>
+  </div>
+</div>
 )
 }
 
