@@ -3,7 +3,7 @@ import React, { useContext, useState } from 'react'
 const RegisterContext = React.createContext('');
 export const useRegisterContext = () => useContext(RegisterContext);
 
-const RegisterProvider = ({}) =>{
+const RegisterProvider = ({children}) =>{
 
     const [person, setPerson] = useState([]);
 
@@ -56,6 +56,7 @@ const IsRegister = (email) =>{
 return(
     <RegisterContext.Provider
         value={{
+            addPerson,
             IsRegister,
             person,
         }}>
