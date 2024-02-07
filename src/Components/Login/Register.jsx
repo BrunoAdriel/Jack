@@ -11,13 +11,16 @@ function Register() {
   const [secondEmail, setSecondEmail] = useState ('');
   const [password, setPassword] = useState('');
   const [secondPass, setsecondPass] = useState('');
-  const {addPerson} = useRegisterContext();
+  const {addPerson, samePass} = useRegisterContext();
 
   // Llama a la función addPerson y pasa los valores
-  const registerAdd = (person) => {
+  const registerAdd = () => {
     addPerson(names, surname, email, secondEmail, password, secondPass);
   };
 
+  const isFormValid = () => {
+    return names !== '' && surname !== '' && email !== '' && password !== '' && samePass 
+  };
 
 
 return (
@@ -58,7 +61,7 @@ return (
 {/* Buttons final */}
   <div className='btnRegister'>
     <spam>Deseas volver a <Link to="/Login">Ingrersar</Link></spam>
-    <button type="button" className="btn btn-success" onClick={registerAdd}>Registrarse</button>
+    <button type="button" className="btn btn-success" onClick={registerAdd} disabled={!isFormValid()}>Registrarse</button>
   </div>
 </form>
 </div>
