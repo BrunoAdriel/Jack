@@ -8,15 +8,16 @@ function Register() {
   const [names, setNames] = useState('');
   const [surname, setSurname] = useState('');
   const [email, setEmail] = useState('');
-  // const [secondEmail, serSecondEmail] = useState ('')
+  const [secondEmail, setSecondEmail] = useState ('');
   const [password, setPassword] = useState('');
-
-  const { addPerson } = useRegisterContext();
+  const [secondPass, setsecondPass] = useState('');
+  const {addPerson} = useRegisterContext();
 
   // Llama a la función addPerson y pasa los valores
-  const registerAdd = () => {
-    addPerson(names, surname, email, password);
+  const registerAdd = (person) => {
+    addPerson(names, surname, email, secondEmail, password, secondPass);
   };
+
 
 
 return (
@@ -39,7 +40,7 @@ return (
 {/* repetir email */}
   <div class="mb-3">
     <label for="exampleInputEmail2" className="form-label"></label>
-    <input type="email" className="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Confirmar Email"/>
+    <input type="email" className="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Confirmar Email" value={secondEmail} onChange={(e) => setSecondEmail(e.target.value)}/>
   </div>
 {/* contraseña */}
   <div>
@@ -52,7 +53,7 @@ return (
 {/* repetir contra */}
   <div>
     <label for="inputPassword5" className="form-label"></label>
-    <input type="password" id="inputPassword5" className="form-control" aria-describedby="passwordHelpBlock" placeholder="Confirmar Contraseña"/>
+    <input type="password" id="inputPassword5" className="form-control" aria-describedby="passwordHelpBlock" placeholder="Confirmar Contraseña" value={secondPass} onChange={(e) => setsecondPass(e.target.value)}/>
   </div>
 {/* Buttons final */}
   <div className='btnRegister'>
