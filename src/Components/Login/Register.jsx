@@ -1,16 +1,30 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
+import { useRegisterContext } from '../../Context/RegisterContext';
+
 
 function Register() {
+
+const [successReg, setSuccessReg] = useState(false);
+const {addPerson} = useRegisterContext();
+const registerAdd = () =>{
+  setSuccessReg(true);
+  addPerson( names, surname, email, password );
+  console.log('pancho')
+}
+
+
+
 return (
 <div className='containerRegistro'>
 {/* Nombre y apellido */}
+<form id="registerForm">
   <div className="row">
     <div className="col">
-      <input type="text" className="form-control" placeholder="Nobre" aria-label="First name"/>
+      <input type="text" className="form-control" placeholder="Nobre" aria-label="First name" id='nombre'/>
     </div>
     <div className="col">
-      <input type="text" className="form-control" placeholder="Apellido" aria-label="Last name" />
+      <input type="text" className="form-control" placeholder="Apellido" aria-label="Last name" id='surname'/>
     </div>
   </div>
 {/* Direc email */}
@@ -39,8 +53,9 @@ return (
 {/* Buttons final */}
   <div className='btnRegister'>
     <spam>Deseas volver a <Link to="/Login">Ingrersar</Link></spam>
-    <button type="button" className="btn btn-success">Registrarse</button>
+    <button type="button" className="btn btn-success" onClick={()=>registerAdd()} >Registrarse</button>
   </div>
+</form>
 </div>
 )
 }
