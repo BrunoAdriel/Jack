@@ -11,7 +11,7 @@ function Register() {
   const [secondEmail, setSecondEmail] = useState ('');
   const [password, setPassword] = useState('');
   const [secondPass, setsecondPass] = useState('');
-  const {addPerson, samePass} = useRegisterContext();
+  const {addPerson} = useRegisterContext();
 
   // Llama a la función addPerson y pasa los valores
   const registerAdd = () => {
@@ -19,8 +19,9 @@ function Register() {
   };
 
   const isFormValid = () => {
-    return names !== '' && surname !== '' && email !== '' && password !== '' && samePass 
+    return names !== '' && surname !== '' && email !== '' && password !== ''
   };
+
 
 
 return (
@@ -48,7 +49,7 @@ return (
 {/* contraseña */}
   <div>
     <label for="inputPassword5" className="form-label"></label>
-    <input type="password" id="inputPassword5" className="form-control" aria-describedby="passwordHelpBlock" placeholder="Constraseña" value={password} onChange={(e) => setPassword(e.target.value)}/>
+    <input type="password" id="inputPassword5" className="form-control" aria-describedby="passwordHelpBlock" placeholder="Constraseña" value={password} onChange={(e) => setPassword(e.target.value)} required/>
       <div id="passwordHelpBlock" className="form-text">
         La contraseña debe incluir de 8 a 20 caracteres, teniendo numeros y letras y no debe tener espacios, caracteres especiales o emoji. 
       </div>

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 
 const RegisterContext = React.createContext('');
 export const useRegisterContext = () => useContext(RegisterContext);
@@ -7,73 +7,40 @@ export const useRegisterContext = () => useContext(RegisterContext);
 const RegisterProvider = ({children}) =>{
     
 const [person, setPerson] = useState([]);
-    
-    // const registerForm  = document.querySelector('#registerForm');
-    // registerForm.addEventListener('submit', (e)=>e.preventDefault());
 
-// original
-// const addPerson = (name, surname, email, secondEmail, password, secondPass) => {
-//     if (IsRegister(email)) {
-//         setPerson(
-//             person.map((prson) =>
-//                 prson.email === email ? { ...prson, name, surname, password, email } : prson
-//             )
-//         );
-//     } else {
-//         setPerson([...person, { name, surname, email, password }]);
-//     }
-//     console.log(person)
-// };
-
-// const IsRegister = (email) => {
-//     return person.find((p) => p.email === email) ? true : false;
-// };
+// codigo para que se me cree el array desde antes y me lo rellene y no me cree el array vasio 
+useEffect(() => {
+    console.log("person:", person);
+}, [person]);
 
 
-// copia
 const addPerson = (name, surname, email, secondEmail, password, secondPass) => {
-    if (handleSubmit(email) || samePass()) {
-        setPerson(
-            person.map((prson) =>
-                prson.email === email ? { ...prson, name, surname, password, email } : prson
-            )
-        );
+    if (isRegister(email) || !samePass(password, secondPass)) {
+        alert("Por favor verifique los datos del formulario!")
     } else {
-        setPerson([...person, { name, surname, email, password }]);
-    }
-    console.log(person)
-};
-
-
-
-const handleSubmit = (email) => {
-    if (IsRegister(email)) {
-        alert("El email ya fue registrado.");
-    } else {
-        console.log("El email no está registrado.");
+        setPerson([...person, { name, surname, email, password, secondPass, secondEmail }]) || alert("registrado!");
     }
 };
 
 
-const IsRegister = (email) => {
+const isRegister = (email) => {
     return person.find((p) => p.email === email) ? true : false;
 };
 
 
-const samePass = (secondPass) =>{
-    if(person.password =! secondPass)
-    alert("Las contraseñas no coinciden")
-    else{person.password === secondPass  
-    }
+const samePass = (password, secondPass) =>{
+    if (password !== secondPass){
+        alert("Las contraseñas no coinciden");
+        return false;
+    } return true;
 }
-
 
 
 return(
     <RegisterContext.Provider
         value={{
             addPerson,
-            IsRegister,
+            isRegister,
             samePass,
             person,
         }}>
