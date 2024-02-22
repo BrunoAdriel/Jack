@@ -1,7 +1,7 @@
 /* Estilos generales de la pagina */
 
 body{
-  background-color: #b9b9b9;
+  background-color: #353434;
 }
 
 /* Estilos de la seccion Navbar */
@@ -130,14 +130,18 @@ th,td{
 .containerRegistro{
   padding: 10px;
   width: 700px;
-  height: 550px;
+  height: 450px;
   border-radius: 3%;
-  background-color: white;
+  background-color: #b9b9b9;
   position: absolute;
   bottom: 25%;
   left: 60%;  
 }
 
+.ss{
+  display: flex;
+  justify-content: center;
+}
 .btnRegister{
 padding: 15px;
   display: flex;
