@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 const RegisterContext = React.createContext('');
 export const useRegisterContext = () => useContext(RegisterContext);
@@ -69,10 +69,10 @@ const handleAddPerson = (name, surname, email, secondEmail, password, secondPass
     
     if (result.success) {
         alert("Registrado!");
+        return <Link to={'/Login'}/>;
     } else {
         alert("Por favor verifique los datos del formulario:\n" + result.errors.join("\n"));
     }
-    <Link to={"/login"}></Link>
 };
 
 

@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 
 const RegisterContext = React.createContext('');
 export const useRegisterContext = () => useContext(RegisterContext);
@@ -15,18 +16,35 @@ useEffect(() => {
 
 
 const addPerson = (name, surname, email, secondEmail, password, secondPass) => {
-    if (isRegister(email) || !samePass(password, secondPass) || sameEmail()) {
-        alert("Por favor verifique los datos del formulario!") 
-    }else {
-        setPerson([...person, { name, surname, email, password, secondPass, secondEmail }]) || alert("registrado!");
+    const errors = [];
+
+    if (isRegister(email)) {
+        errors.push("El email ya está registrado.");
+    }
+
+    if(!isFormValid){
+        error.push("no pueden haber campos vacios!")
+    }
+    
+    if (!samePass(password, secondPass)) {
+        errors.push("Las contraseñas no coinciden.");
+    }
+
+    if (!sameEmail(email, secondEmail)) {
+        errors.push("Los emails no coinciden.");
+    }
+
+    if (errors.length > 0) {
+        return { success: false, errors };
+    } else {
+        setPerson([...person, { name, surname, email, password, secondPass, secondEmail }]);
+        return { success: true };
     }
 };
-
 
 const isRegister = (email) => {
     return person.find((p) => p.email === email) ? true : false;
 };
-
 
 const samePass = (password, secondPass) =>{
     if (password !== secondPass){
@@ -42,12 +60,27 @@ const sameEmail = (email, secondEmail) =>{
     }return true;
 }
 
+const isFormValid = () => {
+    return names !== '' && surname !== '' && email !== '' && password !== ''
+};
+
+const handleAddPerson = (name, surname, email, secondEmail, password, secondPass) => {
+    const result = addPerson(name, surname, email, secondEmail, password, secondPass);
+    
+    if (result.success) {
+        alert("Registrado!");
+        return <Link to={'/login'}/>;
+    } else {
+        alert("Por favor verifique los datos del formulario:\n" + result.errors.join("\n"));
+    }
+};
+
+
 return(
     <RegisterContext.Provider
         value={{
             addPerson,
-            isRegister,
-            samePass,
+            handleAddPerson,
             person,
         }}>
         {children} 
